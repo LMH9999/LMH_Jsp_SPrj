@@ -35,21 +35,20 @@ public class MVCBoardDAO extends DBConnPool {
     // 검색 조건에 맞는 게시물 목록을 반환합니다(페이징 기능 지원).
     public List<MVCBoardDTO> selectListPage(Map<String,Object> map) {
         List<MVCBoardDTO> board = new Vector<MVCBoardDTO>();
-        String query = " "
-                + "SELECT * FROM ( "
-                + "    SELECT Tb.*, ROWNUM rNum FROM ( "
-                + "        SELECT * FROM mvcboard ";
 
-        if (map.get("searchWord") != null)
-        {
+
+        String query = "SELECT * FROM ( "
+                + " SELECT @ROWNUM := @ROWNUM + 1 AS ROWNUM, b.* "
+                + " FROM  mvcboard b,(SELECT @ROWNUM := 0 ) TMP ";
+
+        // 검색 조건 추가
+        if (map.get("searchWord") != null) {
             query += " WHERE " + map.get("searchField")
                     + " LIKE '%" + map.get("searchWord") + "%' ";
         }
 
-        query += "        ORDER BY idx DESC "
-                + "    ) Tb "
-                + " ) "
-                + " WHERE rNum BETWEEN ? AND ?";
+        query += " ORDER BY idx DESC ) T " +
+                " WHERE ROWNUM BETWEEN ? AND ? ;";
 
         try {
             psmt = con.prepareStatement(query);
@@ -60,16 +59,16 @@ public class MVCBoardDAO extends DBConnPool {
             while (rs.next()) {
                 MVCBoardDTO dto = new MVCBoardDTO();
 
-                dto.setIdx(rs.getString(1));
-                dto.setName(rs.getString(2));
-                dto.setTitle(rs.getString(3));
-                dto.setContent(rs.getString(4));
-                dto.setPostdate(rs.getDate(5));
-                dto.setOfile(rs.getString(6));
-                dto.setSfile(rs.getString(7));
-                dto.setDowncount(rs.getInt(8));
-                dto.setPass(rs.getString(9));
-                dto.setVisitcount(rs.getInt(10));
+                dto.setIdx(rs.getString(2));
+                dto.setName(rs.getString(3));
+                dto.setTitle(rs.getString(4));
+                dto.setContent(rs.getString(5));
+                dto.setPostdate(rs.getDate(6));
+                dto.setOfile(rs.getString(7));
+                dto.setSfile(rs.getString(8));
+                dto.setDowncount(rs.getInt(9));
+                dto.setPass(rs.getString(10));
+                dto.setVisitcount(rs.getInt(11));
 
                 board.add(dto);
             }
@@ -86,9 +85,9 @@ public class MVCBoardDAO extends DBConnPool {
         int result = 0;
         try {
             String query = "INSERT INTO mvcboard ( "
-                    + " idx, name, title, content, ofile, sfile, pass) "
+                    + " name, title, content, ofile, sfile, pass) "
                     + " VALUES ( "
-                    + " seq_board_num.NEXTVAL,?,?,?,?,?,?)";
+                    + " ?,?,?,?,?,?)";
             psmt = con.prepareStatement(query);
             psmt.setString(1, dto.getName());
             psmt.setString(2, dto.getTitle());

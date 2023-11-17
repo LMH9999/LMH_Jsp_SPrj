@@ -1,0 +1,15 @@
+
+q
+java:S1104"OMake con a static final constant or non-public and provide accessors if needed.(Àåâçùÿÿÿÿ8ûîâæ½1
+r
+java:S1104"PMake stmt a static final constant or non-public and provide accessors if needed.(µ³Ó¤úÿÿÿÿ8ûîâæ½1
+m
+java:S1104"PMake psmt a static final constant or non-public and provide accessors if needed.(™Ôî˜8ûîâæ½1
+p
+java:S1104"NMake rs a static final constant or non-public and provide accessors if needed.(àğÓÿÿÿÿÿ8ûîâæ½1
+S
+java:S6437"6Revoke and change this password, as it is compromised.(È‘×Ğ8ˆïâæ½1
+L	java:S106"+Replace this use of System.out by a logger.(õ®›úÿÿÿÿ8‰ïâæ½1
+G	java:S106-"+Replace this use of System.out by a logger.(ŸÁ8Šïâæ½1
+G	java:S106A"+Replace this use of System.out by a logger.(èœíğ8‹ïâæ½1
+G	java:S106P"+Replace this use of System.out by a logger.(¡Ã‡¶8Œïâæ½1

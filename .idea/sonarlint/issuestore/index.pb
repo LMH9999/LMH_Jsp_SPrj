@@ -11,3 +11,19 @@ I
 .src/main/java/model2/mvcboard/MVCBoardDAO.java,a\d\adc8381fa546ee1c37cdc63d9a55223bcccb2667
 T
 $src/main/java/common/DBConnPool.java,0\d\0dbe88b3bb28ccfe15455bfb168df76270b383ba
+V
+&src/main/webapp/14MVCBoard/Default.jsp,6\5\65c30f76deab398d808d14ffc738b7a3df95f8a6
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+a
+1src/main/java/model2/mvcboard/ListController.java,5\2\524ecb1f88b23a09875aeee156dcdd13e4f547fa
+R
+"src/main/java/utils/BoardPage.java,0\8\0818dcbbefcb575dbd1dde84cf3b13cc8d53b7cf
+S
+#src/main/webapp/14MVCBoard/List.jsp,2\b\2b9783c6283636664fec0b7db3b1ff43754b3381
+T
+$src/main/java/common/JDBConnect.java,d\3\d3d5ad7437d4b2e702c7edee5fba9a29de8e74c1
+S
+#src/main/java/utils/JSFunction.java,2\6\26c11ac364680eb53e5ee182250b3fa1e3c6b1aa
+R
+"src/main/webapp/ConnectionTest.jsp,2\9\29c6ba523e776813a6200b1f71098b9ca027a189
