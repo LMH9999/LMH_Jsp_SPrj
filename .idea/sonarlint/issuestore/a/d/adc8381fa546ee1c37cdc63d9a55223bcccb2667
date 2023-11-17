@@ -1,0 +1,16 @@
+
+{
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(îÌÕûøÿÿÿÿ8¨Œ¯Û½1
+m
+java:S1192"KDefine a constant instead of duplicating this literal "searchWord" 4 times.(ï¨¾Îûÿÿÿÿ8ªŒ¯Û½1
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶È 
+‡
+java:S1149%"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(îÌÕûøÿÿÿÿ8±Œ¯Û½1
+G	java:S106"+Replace this use of System.out by a logger.(­™Ÿš8µŒ¯Û½1
+F	java:S106N"+Replace this use of System.out by a logger.(¶ÖÀX8ÅŒ¯Û½1
+G	java:S106f"+Replace this use of System.out by a logger.(÷Òšª8ÉŒ¯Û½1
+M	java:S106ƒ"+Replace this use of System.out by a logger.(˜šıÿÿÿÿ8ÍŒ¯Û½1
+M	java:S106”"+Replace this use of System.out by a logger.(¸ˆ“¡ÿÿÿÿÿ8ÎŒ¯Û½1
+F	java:S108£")Either remove or fill this block of code.(‚Üò8ĞŒ¯Û½1
+M	java:S106Ä"+Replace this use of System.out by a logger.(ÏÅßŒùÿÿÿÿ8ÒŒ¯Û½1
+M	java:S106á"+Replace this use of System.out by a logger.(›ú—ñùÿÿÿÿ8ÔŒ¯Û½1
