@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import utils.BoardPage;
 
-//@WebServlet("*.do")
+@WebServlet("/mvcboard/list.do")
 public class ListController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
