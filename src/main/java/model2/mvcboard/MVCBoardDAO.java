@@ -50,8 +50,23 @@ public class MVCBoardDAO extends DBConnPool {
         query += " ORDER BY idx DESC ) T " +
                 " WHERE ROWNUM BETWEEN ? AND ? ;";
 
+//        // 쿼리문 템플릿
+//        String query =" SELECT Tb.* FROM ( "
+//                + " SELECT * FROM mvcboard ";
+//
+//        // 검색 조건 추가
+//        if (map.get("searchWord") != null) {
+//            query += " WHERE " + map.get("searchField")
+//                    + " LIKE '%" + map.get("searchWord") + "%' ";
+//        }
+//
+//        query += " ) Tb " +
+//                " ORDER BY idx DESC " +
+//                " LIMIT ?, 10; ";
+
         try {
             psmt = con.prepareStatement(query);
+//            psmt.setInt(1, Integer.parseInt(String.valueOf(map.get("start"))));
             psmt.setString(1, map.get("start").toString());
             psmt.setString(2, map.get("end").toString());
             rs = psmt.executeQuery();
@@ -69,6 +84,17 @@ public class MVCBoardDAO extends DBConnPool {
                 dto.setDowncount(rs.getInt(9));
                 dto.setPass(rs.getString(10));
                 dto.setVisitcount(rs.getInt(11));
+
+//                dto.setIdx(rs.getString(1));
+//                dto.setName(rs.getString(2));
+//                dto.setTitle(rs.getString(3));
+//                dto.setContent(rs.getString(4));
+//                dto.setPostdate(rs.getDate(5));
+//                dto.setOfile(rs.getString(6));
+//                dto.setSfile(rs.getString(7));
+//                dto.setDowncount(rs.getInt(8));
+//                dto.setPass(rs.getString(9));
+//                dto.setVisitcount(rs.getInt(10));
 
                 board.add(dto);
             }

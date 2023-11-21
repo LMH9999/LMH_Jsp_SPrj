@@ -1,0 +1,15 @@
+
+W
+java:S4973?"<Strings and Boxed types should be compared using "equals()".(‹ƒ‘Áûÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶È 
+|
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Ø¶Å±şÿÿÿÿ
+Q	java:S125)"<This block of commented-out lines of code should be removed.(ˆÆ–Ş
+n
+java:S1989N"SHandle the following exception that could be thrown by "sendRedirect": IOException.(–Ö„ïûÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.nio.file.Files'.(‚ƒü
+E
+java:S1128"/Remove this unused import 'java.nio.file.Path'.(×²êÂ
+F
+java:S1128"0Remove this unused import 'java.nio.file.Paths'.(áè°¯
