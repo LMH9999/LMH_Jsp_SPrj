@@ -1,4 +1,4 @@
-# JSP Personal Project -2-
+# JSP Personal Project -1-
 
 ## 💾프로젝트
 
